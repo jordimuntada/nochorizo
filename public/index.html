@@ -3,28 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modern Male - Insights on Relationships and Personal Growth</title>
+    <title>NoChorizo - Lugar de Reflexión sobre Chorizos y Otros Productos</title>
 
     <!-- Add a meta description with a concise summary of your site's content and purpose -->
-    <meta name="description" content="Discover Modern Male's insights on modern relationships, personal growth, and social dynamics for effective, thoughtful guidance in today's world.">
+    <meta name="description" content="Textos que te harán pensar cómo reevaluar tu postura acerca las acciones que causan sufrimiento innecesario">
+
+    <!-- Twitter Meta -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Compra chorizo ético">
+    <meta name="twitter:description" content="El chorizo está hecho de animales. Los animales ya no necesitan ser explotados por nosotros ni para nosotros. Además, ya existen chorizos éticos hechos a base de plantas">
+    <meta name="twitter:image" content="images/logo.png">
+
 
     <!-- Ensure the favicon accurately represents your site's branding -->
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="/css/style.css">
         <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-9RKF70CJFN"></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-GJBQZ5QVHY"></script>
         <script>
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
         
-          gtag('config', 'G-9RKF70CJFN');
+          gtag('config', 'G-GJBQZ5QVHY');
         </script>
         <script>
             function shareContent() {
                 if (navigator.share) {
                     navigator.share({
-                        title: 'Modern Male - Insights on Relationships and Personal Growth',
+                        title: 'NoChorizo - Textos que hacen pensar',
                         url: window.location.href
                     }).then(() => {
                         console.log('Thanks for sharing!');
@@ -37,10 +44,11 @@
             }
         </script>
         <script>
-            document.addEventListener('DOMContentLoaded', function() {
+           document.addEventListener('DOMContentLoaded', function() {
                 const articleTitles = document.querySelectorAll('article h2');
                 const indexList = document.getElementById('indexList');
-            
+                const toggleButton = document.getElementById('toggleIndexButton');
+
                 articleTitles.forEach((title, index) => {
                     const listItem = document.createElement('li');
                     const link = document.createElement('a');
@@ -48,9 +56,49 @@
                     link.textContent = title.textContent;
                     listItem.appendChild(link);
                     indexList.appendChild(listItem);
-            
+
                     // Assign an ID to each article for anchor linking
                     title.closest('article').id = `article${index}`;
+                });
+
+                // Toggle the article index visibility
+                toggleButton.addEventListener('click', function() {
+                    const articleIndex = document.getElementById('articleIndex');
+                    if (articleIndex.style.display === 'none' || articleIndex.style.display === '') {
+                        articleIndex.style.display = 'block';
+                        toggleButton.textContent = 'Lista de Artículos';
+                        
+
+                        toggleButton.style.padding = "10px";
+                        toggleButton.style.backgroundColor = "gray"; // Corrected from background-color to backgroundColor
+                        toggleButton.style.color = "white";
+                        toggleButton.style.border = "none";
+                        toggleButton.style.borderRadius = "5px"; // Corrected from border-radius to borderRadius
+                        toggleButton.style.cursor = "pointer";
+                        toggleButton.style.fontSize = "18px"; // Corrected from font-size to fontSize
+                        toggleButton.style.fontFamily = "'Arial', sans-serif"; // Set font family to Arial with sans-serif as fallback
+                        toggleButton.style.lineHeight = "1.5"; // Setting the line height
+
+
+                    } else {
+                        articleIndex.style.display = 'none';
+                        toggleButton.textContent = 'Lista de Artículos';
+
+                        toggleButton.style.padding = "10px";
+                        toggleButton.style.backgroundColor = "black"; // Corrected from background-color to backgroundColor
+                        toggleButton.style.color = "white";
+                        toggleButton.style.border = "none";
+                        toggleButton.style.borderRadius = "5px"; // Corrected from border-radius to borderRadius
+                        toggleButton.style.cursor = "pointer";
+                        toggleButton.style.fontSize = "18px"; // Corrected from font-size to fontSize
+                        toggleButton.style.fontFamily = "'Arial', sans-serif"; // Set font family to Arial with sans-serif as fallback
+                        toggleButton.style.lineHeight = "1.5"; // Setting the line height
+
+                        //Change one point down the size of the text
+
+
+
+                    }
                 });
             });
         </script>
@@ -59,23 +107,30 @@
 
     <!-- Share Button -->
     <div id="shareButtonContainer">
-        <button onclick="shareContent()">Share</button>
+        <button onclick="shareContent()">Compartir</button>
     </div>
     
     <header>
-        <div id="articleIndex" class="article-index">
-            <h2>Articles</h2>
+        <div id="toggleIndexButton">
+            <button>Lista de artículos</button>
+        </div>
+        
+        <div id="articleIndex" class="article-index" style="display: none;">
+            <h2>Artículos</h2>
             <ul id="indexList"></ul>
         </div>
         <div class="header-description">
 
-            <h1> Letters for Men and Women </h1>
-            <p>Exploring the Intricacies of Modern Relationships</p>
-                
-<p><strong>Modern Male</strong> is, for now, a Paid Newsletter, but in the future, who knows? Much more for sure. Don't try to find me anywhere else.</p>
-<p>Right now, I only send letters to your email.</p>
+            <h1> No comas animales </h1>
+            <p>Explora los motivos por los cuales debes buscar alternativas</p>
+    
+            <p><strong>noChorizo</strong> es una rama de mi <a href="https://www.instagram.com/ethics.land" target="_blank">Instagram</a>
+                donde hablo sobre la ética de comer animales. Los valores que perseguimos la mayoría en la sociedad actual no incluye
+            comer animales y secreciones.
+            </p>              
+
         </div>
-        <img src="/images/logo.png" alt="Modern Male logo"id="header-logo">
+        <img src="/images/logo.png" alt="NoChorizo logo"id="header-logo">
     </header>
     
     <nav>
@@ -85,22 +140,26 @@
     <article>
         <!-- Article content here -->
         <article>
-            <h2>The Art of Effortless Relationships</h2>
-            <p>Many believe that maintaining a relationship is hard work, but the truth is, having a relationship that feels effortless is entirely achievable. Such a relationship is so fulfilling that once experienced, you wouldn't want to revert to any previous ways of relating. Just as water effortlessly flows downhill, relationships can be natural and easy. Forcing a relationship is like pushing water uphill — it demands constant effort and energy, akin to an unpaid second job.</p>
+            <h2>Riesgos para la Salud del Chorizo Tradicional</h2>
+            <p><time datetime="2023-10-25">October 25, 2023</time></p>
+            <p>No obstante, es esencial tener en cuenta los riesgos para la salud que conlleva su consumo. Optar por alternativas más saludables puede permitirte saborear la deliciosa esencia del chorizo sin preocupaciones por los impactos negativos en tu bienestar. Al tomar decisiones informadas sobre tus elecciones alimenticias, puedes disfrutar de un estilo de vida más saludable.</p>
 
-            <p>However, the ease of a relationship can often hinge on your understanding of yourself and your ability to choose a compatible partner carefully. While finding the right person is crucial, it's not the only factor. Assuming you've made a wise choice, understanding just one key concept can lead to a seamless relationship.</p>
+            <h2>Riesgos para la Salud del Chorizo Tradicional:</h2>
+            <p>El chorizo tradicional, a menudo elaborado con carne de cerdo y especias, contiene una cantidad significativa de grasas saturadas y colesterol. Estos componentes pueden ser perjudiciales para la salud cardiovascular. El consumo excesivo de grasas saturadas se ha asociado con enfermedades cardíacas y la obstrucción de las arterias. Además, el colesterol elevado en la sangre es un factor de riesgo para problemas cardíacos.</p>
+            <p>La cantidad de sodio en el chorizo también es motivo de preocupación. El exceso de sodio puede contribuir a la hipertensión arterial, lo que a su vez aumenta el riesgo de enfermedades cardiovasculares. Además, los chorizos a menudo contienen conservantes y aditivos que no son ideales para la salud a largo plazo.</p>
 
-            <p>Before delving into this key concept, let’s consider a parallel with professional life. Reflect on your work history. Many of us have had a variety of jobs, some less than ideal, giving us insight into the challenges of finding fulfilling work. Early career stages often bring tough bosses, challenging colleagues, and demanding schedules. Yet, imagine landing your dream job, with excellent pay, flexible hours, control over your work, and a supportive environment. Naturally, you'd do everything to maintain such a position, knowing the alternatives.</p>
+            <h2>Alternativas Saludables:</h2>
+            <p>Afortunadamente, hoy en día, existen numerosas alternativas saludables al chorizo tradicional que permiten disfrutar de sabores similares sin los riesgos para la salud. Estas incluyen:</p>
+            <ul>
+                <li>Salchichas a base de plantas: Estas son alternativas veganas y bajas en grasas saturadas, pero ricas en sabor. Muchas opciones de salchichas a base de plantas están disponibles en el mercado.</li>
+                <li>Tempeh: El tempeh es una fuente de proteína vegetal que se puede sazonar de manera deliciosa para replicar el sabor del chorizo.</li>
+                <li>Opciones veganas: Existen chorizos veganos que no solo son saludables, sino también éticos, ya que no implican el sacrificio de animales.</li>
+            </ul>
 
-            <p>This analogy applies to relationships as well. With even limited dating experience, one often has enough insight into the dating landscape. A relationship with a person who leads an emotionally rich life, who is engaging, fun, and physically fit, and who offers unique and valuable experiences, is something to cherish and maintain.</p>
+            <h2>Tomar Decisiones Informadas:</h2>
+            <p>Elegir opciones más saludables y conscientes al preparar tus comidas puede tener un impacto significativo en tu salud a largo plazo. Al tomar decisiones informadas y optar por alternativas más saludables al chorizo tradicional, estás tomando un paso en la dirección correcta hacia un estilo de vida más saludable y sostenible. Además, al elegir opciones basadas en plantas, también contribuyes a reducir tu huella ecológica y a proteger a los animales.</p>
 
-            <p>The essence of an effortless relationship lies in being perceived as the top choice. This concept, while straightforward, is not always easy to embody. It's akin to being the ideal employee in a dream job. When you are seen as the best choice, manipulation and control tactics become unnecessary. Instead, you become someone who is valued and desired, making the relationship harmonious and natural.</p>
-
-            <p>Conversely, difficulties in a relationship often arise when one partner feels they could find someone better. The underlying reasons are less important than the experience itself. The wise approach is to be with someone who appreciates and values their relationship with you. Settling for less can turn a relationship into a laborious task.</p>
-
-            <p>So, what are your thoughts? Have you ever found yourself in such a relationship? Share your experiences in the comments.</p>
-
-
+            <p>En resumen, el chorizo tradicional puede ser delicioso, pero no es la opción más saludable. Explora alternativas más conscientes y nutritivas que te permitan disfrutar de sabores similares sin los riesgos asociados. Al hacerlo, estarás dando un paso hacia un estilo de vida más saludable y sostenible.</p>
         </article>
         
     </article>
@@ -108,37 +167,44 @@
         <input type="email" name="email" placeholder="Enter your email">
         <button type="submit">Subscribe</button>
     </form>-->
-    <iframe src="https://modernmale.substack.com/embed" width="480" height="320" style="border:1px solid #EEE; background:white;" frameborder="0" scrolling="no"></iframe>
-
+    <a href="https://www.instagram.com/ethics.land" target="_blank" style="display: inline-block; text-align: center; color: #000; text-decoration: none;">
+        <i class="fab fa-instagram" style="font-size: 48px; color: #C13584;"></i>
+        <p style="margin: 0;">Sígueme en Instagram</p>
+    </a>
 
     <article>
         <!-- Article content here -->
         <article>
-            <h2>How to love without emotional attachment</h2>
-            <p>Loving without attachment is challenging, yet vitally important. Without mastering this, one might either engage in controlling behaviors or be swept up in an emotional rollercoaster. Loving without attachment allows us to maintain tranquility and enjoy fulfilling relationships with those who choose us just as freely.</p>
+            <h2>Explorando las Alternativas al Chorizo a Base de Plantas: Una Elección Deliciosa y Más Saludable</h2>
+            <p><time datetime="2023-10-25">October 25, 2023</time></p>
+            <h3>El chorizo tradicional tiene un sabor único, pero también conlleva riesgos para la salud debido a su alto contenido de grasas saturadas y colesterol.</h3>
+    <p>Sin embargo, hay una alternativa más saludable: el chorizo a base de plantas. En este artículo, exploraremos esta opción y te ofreceremos recetas deliciosas para satisfacer tus antojos de chorizo sin poner en peligro tu salud.</p>
 
-            <p>Let's dive into how this can be achieved. Personally, I'm more of a dog person, but I have a friend who really likes and understands the nature of cats, and that's where this analogy stems from.</p>
+    <h3>Riesgos para la Salud del Chorizo Tradicional:</h3>
+    <p>El chorizo tradicional, generalmente hecho de cerdo y especias, es rico en grasas saturadas y colesterol. Estos componentes pueden aumentar el riesgo de problemas cardíacos. Por eso, es inteligente considerar alternativas que ofrezcan sabores similares sin los posibles problemas de salud.</p>
 
-            <p>Letters for Men and Women is a reader-supported publication. To receive new posts and support my work, consider becoming a free or paid subscriber.</p>
+    <h3>Chorizo a Base de Plantas: Saludable y Sabroso:</h3>
+    <p>El chorizo a base de plantas se hace completamente de ingredientes vegetales, lo que lo hace naturalmente bajo en grasas saturadas y colesterol. Ofrece los sabores audaces y picantes del chorizo tradicional sin los riesgos para la salud.</p>
 
-            <p>My friend treats relationships much like the way he treats cats. Cats, as they explain, come and go on their own terms. They don't adhere to our calls and leave when they wish. If you attempt to hold a cat against its will, you're likely to face resistance. Similarly, if a cat desires attention and doesn't receive it, it will make its presence known until it does. My friend appreciates this independent nature of cats.</p>
+    <h3>Explorando Ingredientes a Base de Plantas:</h3>
+    <p>El chorizo a base de plantas a menudo contiene ingredientes como:</p>
+    <p>Proteína Vegetal Texturizada (TVP): Este ingrediente de origen vegetal imita la textura de la carne molida.</p>
+    <p>Legumbres: Frijoles negros o lentejas aportan proteína a base de plantas.</p>
+    <p>Especias y Condimentos: Ingredientes como el pimentón ahumado, el comino y el chile en polvo proporcionan el sabor característico del chorizo.</p>
 
-            <p>In his neighborhood, there's a Siamese cat that occasionally visits. They share a mutual enjoyment of each other's company, partly because my friend occasionally puts out milk for the cat. They never know when the cat will visit again, but they know that offering good milk usually brings him back. Cats, after all, are drawn to good milk.</p>
+    <h3>Recetas Deliciosas y Saludables:</h3>
+    <p>Con el chorizo a base de plantas, puedes preparar recetas deliciosas. Aquí tienes algunas favoritas:</p>
+    <p>Tacos de Chorizo a Base de Plantas: Llena tortillas con chorizo a base de plantas, guacamole y salsa fresca para una cena deliciosa y saludable.</p>
+    <p>Pimientos Rellenos de Chorizo: Crea un relleno sabroso para los pimientos con chorizo a base de plantas, arroz y verduras, luego hornea para una comida nutritiva.</p>
+    <p>Chili de Chorizo y Frijoles Negros: Un chili abundante hecho con chorizo a base de plantas, frijoles negros y especias para una comida reconfortante.</p>
 
-            <p>When the cat is away, my friend doesn't dwell on his absence. He’s not preoccupied with whether the cat misses him or is visiting another home. He has his life to live, with businesses to run, gym sessions, and time spent with friends. The cat is a delightful addition to his life when present, but not a constant focus of his thoughts.</p>
+    <h3>Una Elección Ética:</h3>
+    <p>Elegir chorizo a base de plantas es una elección ética y sostenible, además de saludable. Al optar por alternativas que no dependen de productos animales, estás contribuyendo a un sistema alimentario más compasivo y amigable con el planeta.</p>
 
-            <p>Some might argue that humans are not like cats, as humans have more complex needs and responsibilities. And what if the cat prefers someone else's milk? Well, as my friend reasons, if the cat is enjoying another's milk, it's not really 'his' cat. It doesn't belong to anyone; it's a free agent of the neighborhood. This is a crucial point in understanding emotional attachment - thinking of relationships in terms of ownership can lead to unhealthy dynamics akin to emotional slavery.</p>
+    <h3>Conclusión: Delicioso y Saludable:</h3>
+    <p>En resumen, el chorizo a base de plantas es una alternativa sabrosa y saludable al chorizo tradicional. Ofrece los mismos sabores sin los riesgos para la salud. La próxima vez que tengas antojo de chorizo, elige la variedad a base de plantas. Tu paladar, tu salud y el planeta te lo agradecerán. El sabor y la salud van de la mano con esta elección consciente.</p>
 
-            <p>It's an unfortunate reality that many give their pets more freedom and affection than they do their partners. Yet humans require more freedom and love than animals. And despite popular belief, a marriage license does not equate to ownership over another person. My friend believes that just like consistently offering good milk can keep a cat returning, consistently providing love and respect in a relationship fosters a stronger bond than any legal document could.</p>
-
-            <p>Returning to the cat analogy, if you provide the best milk in the neighborhood, the cat is likely to visit you first. You can't control its other ventures, but offering quality care increases the likelihood of its return. Remember, it's the cat that decides whose milk is best, and it shows its preference through its actions.</p>
-
-            <p>My friend puts out milk not to trap the cat in an exclusive arrangement, but because they genuinely like cats. It's an act without expectation of return. The cat might come back on its own terms to enjoy the company, and if not, perhaps another cat will. This is the essence of putting goodness out into the world without attachment. People, like cats, will be drawn to the value you offer. Those who recognize this value will choose to be part of your life, returning out of free will, not obligation.</p>
-
-            <p>When these connections are made daily, they evolve into meaningful relationships. These individuals remain in your life because they choose to, not because they are forced to stay. And if, for some reason, they don't return, be grateful for the moments shared and continue to offer your 'good milk.' Another will surely come along.</p>
-
-            <p>In summary, here are the key lessons on loving without attachment: First, offer consistent value ('good milk'). Second, continue with your life when the 'cat' isn't there. Third, avoid possessive thoughts like 'This is my cat.' And finally, understand and accept that relationships, much like cats, have their own rhythms and patterns. This approach fosters a healthy, non-attached way of loving. What are your thoughts on this method of fostering relationships?</p>
-
+            
 
         </article>
         
@@ -147,32 +213,33 @@
         <input type="email" name="email" placeholder="Enter your email">
         <button type="submit">Subscribe</button>
     </form>-->
-    <iframe src="https://modernmale.substack.com/embed" width="480" height="320" style="border:1px solid #EEE; background:white;" frameborder="0" scrolling="no"></iframe>
-
+    <a href="https://www.instagram.com/ethics.land" target="_blank" style="display: inline-block; text-align: center; color: #000; text-decoration: none;">
+        <i class="fab fa-instagram" style="font-size: 48px; color: #C13584;"></i>
+        <p style="margin: 0;">Sígueme en Instagram</p>
+    </a>
 
     <article>
         <!-- Article content here -->
         <article>
-            <h2>Why it's challenging for women to apologize</h2>
-            <p>Today, we're tackling a particularly intriguing subject: the complexity behind why it's challenging for women to apologize.</p>
+            <h2>Una Mejor Tú: Elige el Chorizo Vegano</h2>
+            <p><time datetime="2023-11-07">Noviembre 7, 2023</time></p>
+            <p>Optar por el chorizo vegano no solo beneficia tu salud, sino también el medio ambiente y tu conciencia ética. En este artículo, exploraremos cómo el chorizo vegano puede tener un impacto positivo en tu bienestar, tu ética y en la protección de nuestro planeta.</p>
 
-            <p>Over several many years I've noticed a curious trend: apologies from women have been noticeably scarce. This observation isn't to suggest a universal truth about women's integrity or honesty, but rather to highlight a nuanced aspect of interpersonal dynamics.</p>
+            <h3>Beneficios para tu Salud:</h3>
+            <p>El chorizo vegano es una elección más saludable para tu cuerpo. A diferencia del chorizo tradicional, que a menudo contiene grasas saturadas y colesterol, el chorizo vegano está libre de estos componentes perjudiciales. Al hacer la transición al chorizo vegano, puedes reducir el riesgo de enfermedades cardíacas y mejorar tu salud cardiovascular. Además, es una fuente de proteínas vegetales que te brinda los nutrientes que necesitas sin los efectos negativos para la salud.</p>
 
-            <p>The act of apologizing serves as a powerful tool in repairing and enhancing relationships. It's a straightforward gesture that can bring about forgiveness and understanding. However, there seems to be a disparity in how men and women perceive apologies and their role in resolving conflicts.</p>
+            <h3>La Ética detrás del Chorizo Vegano:</h3>
+            <p>Optar por el chorizo vegano refleja un compromiso ético con los derechos de los animales. El proceso de producción del chorizo tradicional a menudo implica la explotación y el sacrificio de animales. Al elegir el chorizo vegano, estás contribuyendo a un sistema alimentario más compasivo. Tu elección refleja una preocupación genuina por la vida y el bienestar de los animales. Es un acto de empatía hacia otras criaturas que comparten nuestro planeta.</p>
 
-            <p>From a male perspective, resolving a problem often revolves around acknowledging a specific behavior that's seen as an issue. This acknowledgment, followed by a change in behavior, is viewed as the ideal resolution. Women, on the other hand, may interpret the problem differently. In their view, it’s not solely about the behavior but also about the emotional fallout - the anger or upset that the behavior has caused. Thus, their approach to resolving the issue might involve changing the emotional atmosphere, which could take various forms, from kind gestures to attempts at lightening the mood.</p>
+            <h3>El Impacto Ambiental:</h3>
+            <p>El chorizo vegano también beneficia al planeta. La industria ganadera es una de las principales fuentes de emisiones de gases de efecto invernadero, deforestación y agotamiento de recursos naturales. Optar por el chorizo vegano reduce tu huella ecológica y ayuda a mitigar el cambio climático. Es una forma de actuar en línea con tus valores ambientales y de trabajar hacia un futuro más sostenible para las generaciones futuras.</p>
 
-            <p>One particularly striking example is how sex is sometimes used as a form of apology or peace offering, a strategy that can overshadow the sincerity and depth of communication in a relationship.</p>
+            <h3>Recetas Deliciosas y Compasivas:</h3>
+            <p>La versatilidad del chorizo vegano te permite disfrutar de platos deliciosos y éticos. Desde chorizo vegano en tacos hasta guisos y pizzas, hay innumerables formas de incorporar este ingrediente en tus comidas diarias. No tienes que sacrificar el sabor para hacer elecciones éticas y saludables.</p>
 
-            <p>The key takeaway here is the profound impact that understanding and appropriately using apologies can have in relationships. For women, recognizing the value of a heartfelt apology can significantly enhance mutual respect and understanding. It demonstrates accountability and consideration, qualities that are deeply appreciated and often missed in relationships.</p>
-
-            <p>This discussion isn't just about one gender adapting to the other; it's about fostering a deeper sense of empathy and understanding in relationships. Recognizing these differing perspectives can pave the way for more harmonious and meaningful connections.</p>
-
-            <p>What are your thoughts on this topic? Have your experiences reflected these observations? Share your insights in the comments below.</p>
-
-            <p>Stay tuned for my next episode.</p>
-
-            <p>Thank you for joining us in this exploration of human behavior and relationships.</p>
+            <h3>Conclusión: Tu Elección, Tu Impacto:</h3>
+            <p>Al optar por el chorizo vegano, estás priorizando tu salud, demostrando empatía hacia los animales y contribuyendo a la sostenibilidad del planeta. Tu elección tiene un impacto significativo en tu bienestar, tu ética y el medio ambiente. Es una forma de vivir de acuerdo con tus valores y de trabajar hacia un mundo más compasivo y saludable. La próxima vez que tengas antojo de chorizo, elige la versión vegana y descubre cómo una elección puede marcar la diferencia en muchos aspectos de tu vida y el mundo que te rodea.</p>
+            
 
         </article>
         
@@ -181,29 +248,11 @@
         <input type="email" name="email" placeholder="Enter your email">
         <button type="submit">Subscribe</button>
     </form>-->
-    <iframe src="https://modernmale.substack.com/embed" width="480" height="320" style="border:1px solid #EEE; background:white;" frameborder="0" scrolling="no"></iframe>
-    <article>
-        <article>
-            <h2>The Art of Saying No</h2>
-            <p>In this letter, we dive into a topic that is often overlooked but is crucial for healthy relationships: the skill of disappointing women.</p>
-
-            <p>It's a common misconception, especially among young men, that pleasing women at all costs is the key to a successful relationship. This belief, rooted in a scarcity mentality, leads to the fear that saying 'no' to a woman's desires could jeopardize the relationship's foundation. However, it's essential to understand that the ability to disappoint is not only healthy but necessary.</p>
-
-            <p>Women, much like men, have their own set of desires and expectations. However, a woman's love can often be more consumptive, desiring all of a man's time and attention. While this might seem flattering, constantly giving in can lead to the loss of those very qualities that made a man attractive to her in the first place. Ironically, giving a woman everything she wants can result in her losing attraction.</p>
-
-            <p>Maintaining a balance in a relationship is key. A man needs to continue being the person the woman fell in love with, which includes having his own life, friends, hobbies, and personal development. It's vital to understand that disappointing a woman does not mean disrespecting her; it's about maintaining your own identity and boundaries.</p>
-
-            <p>In relationships, both partners should feel comfortable saying 'no' to each other without fear of ending the relationship. If a woman reacts negatively to disappointment, it could be a sign of immaturity or unrealistic expectations.</p>
-
-            <p>Remember, it's okay to maintain your lifestyle and interests, as they are what make you attractive. Disappointing your partner is not about being unkind; it's about being honest and true to yourself.</p>
-
-            <p>As we come to the close of this discussion, I'm curious to hear about your experiences. Does this resonate with you? Please feel free to share your thoughts in the comments below.</p>
-
-            <p>Thank you for reading and for being a part of this conversation.</p>
-
-        </article>
-    </article>
-    <iframe src="https://modernmale.substack.com/embed" width="480" height="320" style="border:1px solid #EEE; background:white;" frameborder="0" scrolling="no"></iframe>
+    <a href="https://www.instagram.com/ethics.land" target="_blank" style="display: inline-block; text-align: center; color: #000; text-decoration: none;">
+        <i class="fab fa-instagram" style="font-size: 48px; color: #C13584;"></i>
+        <p style="margin: 0;">Sígueme en Instagram</p>
+    </a>
+        
     <!-- More content here -->
     <!-- <footer>
         <div class="footer-container">
