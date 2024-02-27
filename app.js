@@ -26,6 +26,24 @@ async function getUrls() {
     return urls;
 }
 
+app.get('/article5', (req, res) => {
+    // Lee el contenido de article5.html
+    const articleContent = fs.readFileSync(path.join(__dirname, 'public/articles/article_5_Pimenton_es_lo_importante.html'), 'utf8');
+    
+    // Construye la página HTML completa incrustando el contenido de article5.html
+    const fullPage = `
+    <nav>
+        <!-- Navigation menu here -->
+    </nav>
+    ${articleContent}
+    <article>
+        <!-- El resto de tu contenido de artículo aquí -->
+    </article>
+    `;
+    
+    res.send(fullPage);
+});
+
 // Generate sitemap.xml
 app.use(expressSitemapXml(getUrls, 'https://nochorizo.com'));
 

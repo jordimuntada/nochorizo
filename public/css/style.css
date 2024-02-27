@@ -154,7 +154,7 @@ footer {
 #NewsletterButtonContainer {
     position: fixed;
     top: 20px;   /* Distance from top, aligned with the Share button */
-    right: 140px;  /* Distance from right - adjusted to place it to the left of the Share button */
+    right: 120px;  /* Distance from right - adjusted to place it to the left of the Share button */
     z-index: 1000;  /* Ensures the button stays above other elements */
 }
 
@@ -174,7 +174,7 @@ footer {
 #toggleIndexButton {
     position: fixed;
     top: 20px;   /* Distance from bottom */
-    right: 120px;    /* Distance from right */
+    right: 230px;    /* Distance from right */
     z-index: 1000;  /* Ensures the button stays above other elements */
 }
 
@@ -188,3 +188,11 @@ footer {
     cursor: pointer;
 }
 
+
+  .responsive-image {
+    max-width: 100%; /* Ensures the image is never wider than its container */
+    height: auto; /* Maintains the aspect ratio */
+    display: block; /* Removes any extra space below the image */
+    margin-left: auto; /* Centers the image horizontally */
+    margin-right: auto; /* Centers the image horizontally */
+  }

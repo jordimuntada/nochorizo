@@ -42,6 +42,13 @@
                     alert('Your browser does not support the share API. Please copy the URL manually.');
                 }
             }
+            function redirectToNewsletter() {
+                // Construct the URL for the newsletter page
+                var newsletterUrl = 'sections/newsletter.html';
+
+                // Redirect the user to the newsletter page
+                window.location.href = newsletterUrl;
+            }
         </script>
         <script>
            document.addEventListener('DOMContentLoaded', function() {
@@ -109,6 +116,9 @@
     <div id="shareButtonContainer">
         <button onclick="shareContent()">Compartir</button>
     </div>
+    <div id="NewsletterButtonContainer">
+        <button onclick="redirectToNewsletter()">Newsletter</button>
+    </div>
     
     <header>
         <div id="toggleIndexButton">
@@ -138,17 +148,31 @@
     </nav>
     
     <article>
+        <article>
+            <h2>El Pimentón: Ingrediente Estrella del Chorizo</h2>
+            <p><time datetime="2024-02-27">27 de Febrero de 2024</time></p>
+            <p>Contrario a la creencia popular, el ingrediente que realmente define al chorizo no es la carne de cerdo, sino el pimentón. Este condimento no solo le otorga al chorizo su color rojo característico, sino que también es responsable de su inconfundible aroma y sabor. El pimentón, una especia derivada del secado y molido de pimientos rojos, es lo que distingue al chorizo español de otros embutidos alrededor del mundo.</p>
+            <img src="articles/images/article5.webp" alt="El Pimentón: Ingrediente Estrella del Chorizo" class="responsive-image">
+
+            <p>Mientras que la carne de cerdo ha sido tradicionalmente considerada el componente principal del chorizo, es el pimentón el que aporta las cualidades más distintivas a este embutido. Su sabor ahumado y su profundidad aromática enriquecen el chorizo de una manera que la carne por sí sola no podría. Además, el pimentón aporta beneficios para la salud, incluyendo antioxidantes y propiedades antiinflamatorias, lo que contrasta con las preocupaciones asociadas al consumo excesivo de carne roja.</p>
+    
+            <p>Reconocer el papel central del pimentón en la elaboración del chorizo nos invita a apreciar la riqueza de la gastronomía española y a revalorizar los ingredientes que la hacen única. Así, el chorizo se celebra no solo como un producto de la carne, sino como una expresión de la tradición culinaria en la que las especias juegan un papel protagonista.</p>
+    
+            <p>Para más información y perspectivas sobre la importancia del pimentón en la cocina, consulte este tweet:</p>
+            <p><a href="https://x.com/Midietacojea/status/1761361950821192074?s=20" target="_blank">https://x.com/Midietacojea/status/1761361950821192074?s=20</a></p>
+        </article>
+    </article>
+
+    <article>
         <!-- Article content here -->
         <article>
+            
             <h2>Riesgos para la Salud del Chorizo Tradicional</h2>
             <p><time datetime="2023-10-25">October 25, 2023</time></p>
-            <p>No obstante, es esencial tener en cuenta los riesgos para la salud que conlleva su consumo. Optar por alternativas más saludables puede permitirte saborear la deliciosa esencia del chorizo sin preocupaciones por los impactos negativos en tu bienestar. Al tomar decisiones informadas sobre tus elecciones alimenticias, puedes disfrutar de un estilo de vida más saludable.</p>
-
-            <h2>Riesgos para la Salud del Chorizo Tradicional:</h2>
             <p>El chorizo tradicional, a menudo elaborado con carne de cerdo y especias, contiene una cantidad significativa de grasas saturadas y colesterol. Estos componentes pueden ser perjudiciales para la salud cardiovascular. El consumo excesivo de grasas saturadas se ha asociado con enfermedades cardíacas y la obstrucción de las arterias. Además, el colesterol elevado en la sangre es un factor de riesgo para problemas cardíacos.</p>
             <p>La cantidad de sodio en el chorizo también es motivo de preocupación. El exceso de sodio puede contribuir a la hipertensión arterial, lo que a su vez aumenta el riesgo de enfermedades cardiovasculares. Además, los chorizos a menudo contienen conservantes y aditivos que no son ideales para la salud a largo plazo.</p>
 
-            <h2>Alternativas Saludables:</h2>
+            <h3>Alternativas Saludables:</h3>
             <p>Afortunadamente, hoy en día, existen numerosas alternativas saludables al chorizo tradicional que permiten disfrutar de sabores similares sin los riesgos para la salud. Estas incluyen:</p>
             <ul>
                 <li>Salchichas a base de plantas: Estas son alternativas veganas y bajas en grasas saturadas, pero ricas en sabor. Muchas opciones de salchichas a base de plantas están disponibles en el mercado.</li>
@@ -156,7 +180,7 @@
                 <li>Opciones veganas: Existen chorizos veganos que no solo son saludables, sino también éticos, ya que no implican el sacrificio de animales.</li>
             </ul>
 
-            <h2>Tomar Decisiones Informadas:</h2>
+            <h3>Tomar Decisiones Informadas:</h3>
             <p>Elegir opciones más saludables y conscientes al preparar tus comidas puede tener un impacto significativo en tu salud a largo plazo. Al tomar decisiones informadas y optar por alternativas más saludables al chorizo tradicional, estás tomando un paso en la dirección correcta hacia un estilo de vida más saludable y sostenible. Además, al elegir opciones basadas en plantas, también contribuyes a reducir tu huella ecológica y a proteger a los animales.</p>
 
             <p>En resumen, el chorizo tradicional puede ser delicioso, pero no es la opción más saludable. Explora alternativas más conscientes y nutritivas que te permitan disfrutar de sabores similares sin los riesgos asociados. Al hacerlo, estarás dando un paso hacia un estilo de vida más saludable y sostenible.</p>
