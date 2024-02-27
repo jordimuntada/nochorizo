@@ -92,6 +92,51 @@ iframe {
 
 /**********************/
 
+/* More code for Newsletter */
+.newsletter-container {
+    background-color: #f9f9f9; /* Light background to distinguish the section */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+    max-width: 800px; /* Adjust based on your design */
+    margin: 20px auto; /* Centering */
+}
+
+.newsletter-title {
+    color: #007bff; /* A color that stands out */
+    text-align: center; /* Center title */
+    margin-bottom: 15px; /* Spacing below the title */
+}
+
+.intro, .content p, .benefits-list {
+    margin-bottom: 15px; /* Consistent spacing */
+}
+
+.benefits-list li {
+    margin-bottom: 10px; /* Spacing between list items */
+}
+
+/* Enhance the list appearance */
+.benefits-list {
+    list-style-type: disc; /* Or choose another style that fits */
+    padding-left: 20px; /* Indent list items */
+}
+
+/* Additional styles for the form, buttons, etc., can be added here */
+/* Article link appearance */
+.article-link {
+    color: inherit; /* Inherits the color from the parent element, useful if your h1 isn't black */
+    text-decoration: none; /* Removes the underline */
+}
+
+.article-link:hover, .article-link:focus {
+    text-decoration: underline; /* Optional: Adds underline on hover for visual feedback */
+}
+
+/********/
+
+
+
 /* Footer CSS to complement your existing body style */
 
 footer {
